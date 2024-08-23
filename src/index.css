@@ -1,8 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: cadetblue;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  font-family: sans-serif;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   text-align: center;
 }
 
-html {
-  background-color: cadetblue;
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.info {
+  border: 1px solid gray;
+  width: 15rem;
+  padding: 1rem 0;
+  border-radius: 10px;
+  background-color: azure;
+  margin: 0 auto;
+}
+
+.info p {
+  color: #007bff;
+  font-weight: 700;
+  font-size: 20px;
 }

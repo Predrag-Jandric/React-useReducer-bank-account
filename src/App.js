@@ -69,9 +69,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>useReducer Bank Account</h1>
-      <p>Balance: {balance}</p>
-      <p>Loan: {loan}</p>
+      <h1>useReducer Bank Account practice</h1>
+      <div className="info">
+        <p>Balance: {balance}</p>
+        <p>Loan: {loan}</p>
+      </div>
 
       <p>
         <button
