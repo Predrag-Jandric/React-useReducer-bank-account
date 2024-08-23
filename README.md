@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# React - useReducer Bank Account
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🔗 [Live Preview](https://harmonious-parfait-ceef03.netlify.app/)
 
-## Available Scripts
+![Design preview](./public/preview.png)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## About Project 👋
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a simple fake banking app built with React using the useReducer hook. The app allows users to manage their bank account with functionalities like opening an account, depositing and withdrawing money, requesting and repaying a loan, and closing the account. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The key goal is to demonstrate the use of the useReducer hook to manage complex state logic in future bigger projects, making it easier to handle multiple actions that affect the same state.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features 👨‍💻
 
-### `npm run build`
+- **Open Account:** Allows the user to open an account with an initial deposit. Once the account is opened, further actions become available.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Deposit Money:** Enables the user to deposit money into their account, increasing the balance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Withdraw Money:** Lets the user withdraw money from their account if there is a sufficient balance.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Request Loan:** Provides a feature to request a loan. The loan amount is added to the account balance, and the loan remains active until repaid.
 
-### `npm run eject`
+- **Pay Loan:** Allows the user to pay off the loan, reducing both the loan balance and the account balance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Close Account:** Permits the user to close their account if there is no remaining balance or outstanding loan.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## How it works ⚙️
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### `App` Component
 
-## Learn More
+- The `App` component is the main component that manages the state of the bank account using the `useReducer` hook. It defines the initial state, sets up the reducer function, and provides the user interface for interacting with the bank account.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### `reducer` Component
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The `reducer` function handles different actions like opening an account, depositing money, withdrawing money, requesting a loan, paying off the loan, and closing the account. Each action updates the state based on the current state and the dispatched action.
 
-### Code Splitting
+#### `initialState` Component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- This is the initial state of the bank account, which includes `balance`, `loan`, and `isActive`. It ensures that the account starts in a default state before any actions are taken.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies & Dependencies used 📦
 
-### Making a Progressive Web App
+- **React:** Core framework for building the user interface and handling component-based architecture.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **useReducer:** React hook for managing complex state logic in the application, particularly useful for handling multiple actions that affect the state.
 
-### Advanced Configuration
+- **CSS:** Basic styling for a clean and responsive layout.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+dependencies:
 
-### Deployment
+- "@testing-library/jest-dom": "^5.17.0",
+- "@testing-library/react": "^13.4.0",
+- "@testing-library/user-event": "^13.5.0",
+- "react": "^18.3.1",
+- "react-dom": "^18.3.1",
+- "react-scripts": "5.0.1",
+- "web-vitals": "^2.1.4"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+devDependencies:
 
-### `npm run build` fails to minify
+- "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+- "@babel/plugin-transform-private-property-in-object": "^7.24.7"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Prerequisites 📚
+
+Ensure you have the following installed on your system:
+
+    Node.js
+    npm or yarn
+    Git
+
+---
+
+## Clone & Run locally 🏃‍♂️
+
+1. **Clone the Repository:**
+
+   - On the GitHub repo page, click the green "Code" button.
+
+   - Copy the HTTPS URL.
+
+2. **Open the Terminal:**
+
+   - Open the terminal by typing "cmd" in your desktop's start menu, **OR**
+
+   - Right-click on the desktop and select "Git Bash Here" (if you have Git Bash installed), **OR**
+
+   - Open Visual Studio Code's terminal by clicking "Terminal" -> "New Terminal" inside the editor.
+
+3. **Navigate to Your Project Location:**
+
+   - In the terminal, navigate to your desired location (e.g., desktop) using the command: `cd desktop`. Adjust the path if your project is located elsewhere.
+
+   - Ensure that your terminal's address is inside the project folder.
+
+4. **Clone the Repository:**
+
+   - Run the command: `git clone /link/`. Replace `/link/` with the HTTPS URL from step 1.
+
+5. **Enter the Project Directory:**
+
+   - Navigate into the cloned repository by typing: `cd /folder-name/`. Replace `/folder-name/` with the name of the cloned folder.
+
+6. **Install Dependencies:**
+
+   - Run the command: `npm install` to install all the necessary dependencies.
+
+7. **Start the Project:**
+
+   - Run the command: `npm start` or `yarn start` to start the project. It will open in your default browser at [localhost:3000/](http://localhost:3000/)
+
+---
+
+## Project Structure 📂
+
+useReducer-bank-account  
+├── public <br />
+├── src <br />
+│   ├── App.js <br />
+│   ├── index.css <br />
+│   ├── index.js <br />
+├── package.json <br />
+└── README.md <br />
+
+---
